@@ -20,7 +20,10 @@ h2{
     font-style: italic;
     text-align: center;
 }
-
-h3{color: #e42929;  }
-ul li{list-style: none; margin: 10px}
-
+h3{color: red;}
+ul li{
+    /* ul 태그에 padding-left: 40px 적용됨 */
+    list-style: none; 
+    margin: 10px;
+    /* line-height: 2; */
+}
