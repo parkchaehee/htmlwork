@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>미디어 쿼리 예제</title>
   <style>
+    /* 가로의 크기가 800px 미만이면 숨기고, 이상이면 보이기 */
     div{
-      /* 가로의 크기가 800px 이상이면 숨기고 , 미만이면 보이기 */
-      width: 90%;/*브라우저크기의 90퍼*/
+      width: 90%;  /* %-가변크기 */
       margin: 0 auto;
       border: 10px solid #ccc;
       padding: 20px;
+      display: block;
     }
-    @media screen and (min-width:800px){
+    @media screen and (max-width: 800px) {
       div{
         display: none;
       }

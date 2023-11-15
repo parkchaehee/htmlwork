@@ -31,21 +31,17 @@ header nav{float: right; width: 900px; padding-top: 40px;}
 /* contents 영역 */
 #contents{height: 800px; margin-top: 100px}
 #tabMenu{width: 600px; margin: 0 auto;}
-#tabMenu input[type=radio]{display: none;}
-#tabMenu label{ display: inline-block;
+#tabMenu input[type="radio"]{display: none;}
+#tabMenu label{display: inline-block;
   padding: 15px 25px; color: #aaa;
 }
 #tabMenu label:hover{color: #222; cursor: pointer;}
-#tabMenu input:checked + label{
-  color: #b00; border: 1px solid #ddd; background: #eee;
+#tabMenu input:checked + label{color: #b00; 
+  border: 1px solid #ddd; background: #eee;
 }
-#tabMenu .tabContent{
-  display: none; padding: 20px 0 0 0;
-  border-top: 1px solid #ddd;
-}
-
-/* 숨긴후 체크되면 보이게 함 */
-/* ~ : 형제 선택자 모두 선택 */
+#tabMenu .tabContent{display: none; padding: 20px 0 0 0; 
+  border-top: 1px solid #ddd;}
+/* '~' : 형제 선택자 모두 선택 */
 #tab1:checked ~ #notice,
 #tab2:checked ~ #gallery{display: block;}
 

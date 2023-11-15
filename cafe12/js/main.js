@@ -1,7 +1,7 @@
 window.onload = function(){
   //이미지 슬라이드
-let picture = ["images/c4.PNG", "images/c8.PNG",
-"images/c7.PNG"];
+let picture = ["images/header0.jpg", "images/header1.jpg",
+"images/header2.jpg"];
 let picIdx = 0;
 
 showSlide();
@@ -17,7 +17,6 @@ picIdx = 0;
 setTimeout(showSlide, 3000);
 }
 
-
 //시계 생성
 setInterval(myWatch, 1000)
 
@@ -30,5 +29,4 @@ function myWatch(){
   watch.innerHTML = time;
   watch.style.color="blue";
 }
-
 }
