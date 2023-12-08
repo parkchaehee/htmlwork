@@ -1,0 +1,55 @@
+/* 박스 전체 */
+@charset "utf-8";
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*{margin: 0; padding: 0; font-family: NanumSquareRound; text-align: center;}
+.container{
+  width: 80%;
+}
+.profile{
+  background-color: rgb(238, 238, 238);
+  width: 880px;
+  height: 300px;
+  margin: 20px auto;
+}
+.select{
+  background-color: rgb(238, 238, 238);
+  width: 860px;
+  height: 30px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.select a{border-right: 1.5px solid #ccc; text-decoration: none;
+  padding: 0 15px;
+ }
+.select a:last-child{border: none;}
+.box{width: 880px; height: 360px; margin: 0 auto;}
+.box div{
+  background-color: rgb(238, 238, 238);
+  width: 420px;
+  height: 150px;
+  float: left;
+}
+.box #box1{margin: 20px 20px 10px 0;}
+.box #box2{margin: 20px 0px 10px 20px;}
+.box #box3{margin: 10px 20px 20px 0;}
+.box #box4{margin: 10px 0px 20px 20px;}
+.more{
+  background-color: rgb(238, 238, 238);
+  width: 850px;
+  height: 30px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.more a{ text-decoration: none;}
+
+@media screen and (max-width: 781px) {
+  .profile{width: 500px;}
+  .select{width: 500px;}
+  .box div{width: 230px;}
+  .more{width: 500px;float: left;}
+}
