@@ -1,0 +1,248 @@
+/* 박스 전체 */
+@charset "utf-8";
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+}
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-family: NanumSquareRound;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+/* 마이페이지 */
+.profile, .select, .box, .more{
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+}
+.profile, .select, .more{
+  background-color: #eee;
+}
+.box{
+  padding-left: 0;
+  padding-right: 0;
+}
+#box1{
+  width: 100%;
+  height: 150px;
+  background-color: #eee;
+  margin: 10px 0;
+  padding-top: 10px;
+}
+#box1 .con{ padding: 10px; height: 80px;}
+
+/* 마이페이지 */
+.profile {
+  height: 300px;
+  display: flex; /* flex container로 만듦 */
+  flex-direction: row;
+  justify-content: space-between; /* 좌우 여백을 최대화하여 우측 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  position: relative; /* 부모 기준으로 자식 요소를 배치하기 위해 필요 */
+}
+
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.profile button {
+  border: none;
+  padding: 8px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.profile #modify{
+  position: absolute; /* 절대 위치로 설정 */
+  top: 20px;
+  right: 59px;
+  border-right: solid 0.5px #eee;
+}
+.profile #modify2{
+  position: absolute;
+  top: 20px; 
+  right: 20px; 
+}
+.profile #my_an{  
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px; /* 이미지 우측 여백 설정 */
+}
+.select{margin-top: 20px; padding: 15px;}
+.select a, .box .like a {
+  text-decoration: none;
+  color: #333;
+  border-right: 1.5px solid #ccc; 
+  padding: 0 30px;
+}
+.select a:last-child , .box .like a:last-child {
+  border: none;
+}
+.select a:active{font-weight: 900;}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box > div {
+  flex: 0 0 calc(50% - 10px);
+  margin-bottom: 20px; /* 각 박스 사이의 간격 조절 */
+}
+/* 프로필 수정 */
+#profileForm img{margin: 20px;}
+#my_p{border: 0.5px solid #eee;}
+#my_p hr{border: 0.5px solid #eee;}
+#my_p p{margin: 20px;}
+#my_p label{margin-top: 5px;}
+#my_p button{background-color: #eee; margin: 10px;} 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  max-width: 400px; /* 최대 너비 지정 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  cursor: pointer;
+}
+/* 찜리스트 */
+#wish{
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #eee;
+  text-align: center;
+  font-size: 15px;
+}
+#wish a:last-child{border: none;}
+.box2 img{width: 100%; height: 300px;}
+#tt{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin: 0;
+  padding: 0;
+}
+#tt .box2{
+  width: 100%;
+  flex: 0 0 calc(40% - 10px); /* 2행 2열로 설정 */
+  margin: 19px;
+  text-align: center;
+  line-height:  50px;
+  border: 1px solid #eee;
+}
+#tt .box2 a{color: black;}
+.box2 hr {
+  border: 0.5px solid #eee;
+}
+#more2{
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #eee;
+  text-align: center;
+}
+.select2 a{
+  border-right: 1.5px solid #ccc; 
+  text-decoration: none;
+  padding: 0 15px;
+}
+.select2 a:last-child{border: none;}
+#wish a{
+  border-right: 1.5px solid #ccc; 
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+/* 계정설정 스타일 */
+#container{width: 70%; margin: 30px auto;}
+ul li{list-style: none;}
+a{text-decoration: none;}
+#memberlist h2{margin: 20px;}
+#join{width: 80%; margin: 20px auto;}
+#join form{margin: 20px auto;}
+form ul li{margin: 20px;}
+form .button{margin-top: 16px;}
+form .button button{
+    margin: 20px;
+    padding: 5px;
+    float: right;
+    background-color: rgb(88, 88, 255); 
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+}
+#memberlist2{width: 370px; height: 350px; border: solid 1px #eee;}
+#fd a{
+  font-size: 15px;
+  color: #333;
+  float: left;
+  margin: 20px;
+  padding: 5px;
+  text-decoration:underline;
+}
+form label{width: 120px; float: left; padding-left: 15px; text-align: left;}
+form input{padding: 5px;}
+.ch input{margin: 5px;}
+
+@media screen and (max-width: 767px) {
+  .box > div {
+    flex: 0 0 calc(100% - 0px); /* 4행 1열로 변경 */
+  }
+  #tt .box2 {
+    flex: 0 0 calc(100% - 0px); /* 4행 1열로 변경 */
+  }
+  #wish, #more2{width: 100%;}
+  .modal-content {
+    width: 80%;
+  }
+  .profile {
+    height: 400px;
+    flex-direction: column; /* 세로 배치로 변경 */
+    align-items: center; /* 가운데 정렬 */
+  }
+
+  .profile #my_an {
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+}
+
+

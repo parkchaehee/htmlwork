@@ -1,0 +1,198 @@
+/* 박스 전체 */
+@charset "utf-8";
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+}
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-family: NanumSquareRound;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+/* 마이페이지 */
+.profile, .select, .box, .more{
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+}
+.profile, .select, .more{
+  background-color: #eee;
+}
+.box{
+  padding-left: 0;
+  padding-right: 0;
+}
+#box1{
+  width: 100%;
+  height: 150px;
+  background-color: #eee;
+  margin: 10px 0;
+  padding-top: 10px;
+}
+#box1 .con{ padding: 10px; height: 80px;}
+
+.profile {
+  height: 300px;
+  display: flex; /* flex container로 만듦 */
+  flex-direction: row;
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.profile button{
+  border: none;
+  padding: 8px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.select{margin-top: 20px; padding: 15px;}
+.select a, .box .like a {
+  text-decoration: none;
+  color: #333;
+  border-right: 1.5px solid #ccc; 
+  padding: 0 30px;
+}
+.select a:last-child , .box .like a:last-child {
+  border: none;
+}
+.select a:active{font-weight: 900;}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box > div {
+  flex: 0 0 calc(50% - 10px);
+  margin-bottom: 20px; /* 각 박스 사이의 간격 조절 */
+}
+/* 프로필 수정 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  cursor: pointer;
+}
+/* 찜리스트 */
+#wish{
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #eee;
+  text-align: center;
+}
+.box2 img{width: 100%; height: 300px;}
+#tt{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin: 0;
+  padding: 0;
+}
+#tt .box2{
+  width: 100%;
+  flex: 0 0 calc(40% - 10px); /* 2행 2열로 설정 */
+  margin: 19px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid #eee;
+}
+#tt .box2 label{
+  color: black;
+}
+#more2{
+  width: 90%;
+  padding: 10px;
+  background-color: #eee;
+  text-align: center;
+  box-sizing: border-box;
+}
+.select2 a{
+  border-right: 1.5px solid #ccc; 
+  text-decoration: none;
+  padding: 0 15px;
+ }
+.select2 a:last-child{border: none;}
+#wish a{
+  border-right: 1.5px solid #ccc; 
+  text-decoration: none;
+  padding: 0 15px;
+ }
+#wish a:last-child{border: none;}
+
+/* 회원 가입 스타일 */
+#container{width: 70%; margin: 30px auto;}
+ul li{list-style: none;}
+a{text-decoration: none;}
+#memberlist h2{margin: 20px;}
+#join{width: 80%; margin: 20px auto;}
+#join form{margin: 20px auto;}
+form ul li{margin: 20px;}
+form .button{margin-top: 16px;}
+form .button button{
+    margin: 20px;
+    padding: 5px;
+    float: right;
+    background-color: blue; 
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+}
+form label{width: 120px; float: left; padding-left: 15px; text-align: left;}
+form input{padding: 5px;}
+.ch input{margin: 5px;}
+
+@media screen and (max-width: 767px) {
+  .box > div {
+    flex: 0 0 calc(100% - 20px); /* 4행 1열로 변경 */
+  }
+  .profile {
+    align-items: center; /* 모바일에서는 가운데 정렬 */
+  }
+  #tt .box2 {
+    flex: 0 0 calc(100% - 20px); /* 4행 1열로 변경 */
+  }
+  #wish{width: 90%;}
+}
