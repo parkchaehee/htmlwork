@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /* 공통 스타일 */
 body{margin: 0;}
 a{
@@ -10,7 +11,7 @@ a{
 .navbar{
   display: flex;
   justify-content: space-between;
-  background-color: rgb(103, 103, 231);
+  background-color: blueviolet;
   align-items: center;
 }
 .navbar_logo{
@@ -40,11 +41,11 @@ a{
   }
   .navbar_menu{
     flex-direction: column;
-    align-items: center;  /* 수직 정렬 */
+    align-items: center; /* 수직 정렬 */
     width: 100%;
-     display: none; 
+    display: none;
   }
-  .navbar_menu li{text-align: center; } /* 수평 정렬 */
+  .navbar_menu li{text-align: center; /*수평 정렬*/}
   .navbar_menu.active{display: flex;}
   .navbar_toggleBtn{display: block;}
 }
